@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/custom-theme';
+@import './assets/scss/utilities';
+@import './assets/scss/base';
+
+html, body { height: 100%; scroll-behavior: smooth;}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: $foreground;
+}
+
+*{
+  box-sizing: border-box;
+}

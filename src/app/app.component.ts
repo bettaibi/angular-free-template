@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from './services/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-free-template';
+
+  constructor(
+    private sharedSrvice: SharedService
+  ){}
+
+
+  say(msg: string) :void{
+    this.sharedSrvice.showMsg(msg)
+  }
 }

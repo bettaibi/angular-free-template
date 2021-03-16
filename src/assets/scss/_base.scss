@@ -1,0 +1,48 @@
+@import './breakpoint';
+
+/* CONTAINER */
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@include mediaXs{
+    .d-xs-none{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+}
+@include mediaSm{
+    .d-sm-none{
+        display: none;
+    }
+    .container{
+        max-width: 540px;
+    }
+}
+@include mediaMd{
+    .d-md-none{
+        display: none;
+    }
+    .container{
+        max-width: 720px;
+    }
+}
+@include mediaLg{
+    .d-lg-none{
+        display: none;
+    }
+    .container{
+        max-width: 960px;
+    }
+}
+@include mediaXlg{
+    .d-xl-none{
+        display: none;
+    }
+    .container{
+        max-width: 1140px;
+    }
+}

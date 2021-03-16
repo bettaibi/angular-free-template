@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+// Palette Colors
+$bn-primary: mat-palette($mat-grey, 800);
+$bn-accent: mat-palette($mat-blue, 700);
+$bn-warn:   mat-palette($mat-red, 600);
+
+
+$primary: #333333 !default;
+$accent: #1976d2 !default;
+$warn: #e53935 !default;
+$background: #fff !default;
+$foreground : rgba(0,0,0,.87) !default;
