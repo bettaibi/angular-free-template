@@ -13,4 +13,16 @@ $bn-theme: mat-light-theme((
   )
 ));
 
+$bn-theme-dark: mat-dark-theme((
+  color: (
+    primary: $bn-primary-dark,
+    accent: $bn-accent-dark,
+    warn: $bn-warn-dark,
+  )
+));
+
 @include angular-material-theme($bn-theme);
+
+.dark-theme-mode{
+  @include angular-material-theme($bn-theme-dark);
+}

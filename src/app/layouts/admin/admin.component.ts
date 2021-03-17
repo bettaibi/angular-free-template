@@ -9,6 +9,9 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
+  isDarkModeActive = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -16,6 +19,8 @@ export class AdminComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  toggleTheme(): void{
+    this.isDarkModeActive = !this.isDarkModeActive;
+  }
 
 }

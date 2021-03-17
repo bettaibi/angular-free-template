@@ -5,6 +5,11 @@ $bn-accent: mat-palette($mat-blue, 700);
 $bn-warn:   mat-palette($mat-red, 600);
 
 
+$bn-primary-dark: mat-palette($mat-lime, 800);
+$bn-accent-dark: mat-palette($mat-amber, 600);
+$bn-warn-dark:   mat-palette($mat-red, 600);
+
+
 $primary: #333333 !default;
 $accent: #1976d2 !default;
 $warn: #e53935 !default;
