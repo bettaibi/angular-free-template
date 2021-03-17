@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
-import { SharedService } from './services/shared.service';
+import { Component, ChangeDetectorRef, AfterViewInit } from '@angular/core';
+import { LoaderService } from './services/loader.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
   constructor(
-    private sharedSrvice: SharedService
+    public loaderService: LoaderService,
+    private changeRef: ChangeDetectorRef
   ){}
 
 
-  say(msg: string) :void{
-    this.sharedSrvice.showMsg(msg)
+  ngAfterViewInit(): void{
+    this.changeRef.detectChanges();
   }
+
 }
