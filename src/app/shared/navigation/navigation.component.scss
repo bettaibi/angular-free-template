@@ -1,0 +1,68 @@
+@import '../../../assets/scss/variables';
+
+:host{
+    a{
+        text-decoration: none;
+        color: #FFFFFF8F;
+        font-size: 14px;
+    }
+    .navigation-header{
+        padding: 0.5rem;
+        background-color: #333;
+        justify-content: space-around;
+        align-items: flex-start;
+        &.active{
+            background-color: darken(#333, 5%);
+            color: #fff;
+        }
+
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+        }
+        span{
+            width: 100%;
+            margin-left: 0.9rem;
+        }
+        .chevron{
+            transition: transform 300ms ease;
+            &.open{
+                transform: rotate(90deg);
+            }
+            &.close{
+                transform: rotate(0);
+            }
+        }
+    }
+
+    .navigation-content{
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        background-color: #333;
+        margin: 0;
+
+        &.active{
+            max-height: 800px;
+            background-color: darken(#333, 5%);
+            a{
+                &.active-route{
+                    color: #fff;
+                }
+            }
+        }
+        li{
+            list-style: none;
+            align-self: start;
+            margin: 0.5rem;
+            cursor: pointer;
+            &:hover{
+                a{
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}

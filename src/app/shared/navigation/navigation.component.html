@@ -1,0 +1,14 @@
+<a class="d-flex flex-row navigation-header" [ngClass]="{'active': isOpen}"
+(click)="toggle()">
+    <mat-icon style="font-size: 16px;">{{nav.icon}}</mat-icon>
+    <span>{{nav.title}}</span>
+    
+    <mat-icon style="font-size: 16px;" [class]="isOpen?'chevron open':'chevron close' "
+    *ngIf="nav.subItems">chevron_right</mat-icon>
+</a>
+
+<ul class="navigation-content" [ngClass]="{'active': isOpen}" *ngIf="nav.subItems">
+  <li *ngFor="let item of nav.subItems">
+    <a [routerLink]="[item.path]" routerLinkActive="active-route" >{{item.title}}</a>
+  </li>
+</ul>

@@ -1,3 +1,5 @@
+@import './variables';
+
 .d-none{
     display: none;
 }
@@ -228,4 +230,19 @@
     &:hover{
         text-decoration: underline;
     }
+}
+
+
+// ________________ colors _________________ //
+.text-primary{
+    color: $primary;
+}
+.text-secondary{
+    color: $secondary;
+}
+.text-danger{
+    color: $warn;
+}
+.text-accent{
+    color: $accent;
 }
