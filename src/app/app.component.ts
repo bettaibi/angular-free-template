@@ -1,5 +1,6 @@
 import { Component, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { LoaderService } from './services/loader.service';
+import { SplashScreenService } from './services/splash-screen.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ export class AppComponent implements AfterViewInit {
 
   constructor(
     public loaderService: LoaderService,
+    private splashScreenService: SplashScreenService,
     private changeRef: ChangeDetectorRef
   ){}
 

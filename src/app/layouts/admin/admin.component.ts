@@ -23,6 +23,7 @@ export class AdminComponent {
       shareReplay()
     );
 
+
   toggleTheme(): void{
     this.isDarkModeActive = !this.isDarkModeActive;
   }
