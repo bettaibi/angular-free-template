@@ -18,6 +18,15 @@ export const navigations: Navigation[] = [
         path: '/statistics',
     },
     {
+        title: 'Custom Components',
+        icon: 'library_books',
+        subItems: [
+            {title: 'Toast', path:'/custom-components/toast'},
+            {title: 'Register', path:'/register'},
+            {title: 'Forget Password', path:'/forget-password'},
+        ]
+    },
+    {
         title: 'Auth',
         icon: 'lock',
         subItems: [

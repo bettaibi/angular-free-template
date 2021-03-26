@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, AfterViewInit } from '@angular/core';
+import { Component, ChangeDetectorRef, DoCheck } from '@angular/core';
 import { LoaderService } from './services/loader.service';
 import { SplashScreenService } from './services/splash-screen.service';
 
@@ -7,7 +7,7 @@ import { SplashScreenService } from './services/splash-screen.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements DoCheck {
 
   constructor(
     public loaderService: LoaderService,
@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewInit {
   ){}
 
 
-  ngAfterViewInit(): void{
+  ngDoCheck(): void{
     this.changeRef.detectChanges();
   }
 

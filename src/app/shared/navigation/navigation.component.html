@@ -9,6 +9,6 @@
 
 <ul class="navigation-content" [ngClass]="{'active': isOpen}" *ngIf="nav.subItems">
   <li *ngFor="let item of nav.subItems">
-    <a [routerLink]="[item.path]" routerLinkActive="active-route" >{{item.title}}</a>
+    <a routerLink="{{item.path}}" routerLinkActive="active-route" >{{item.title}}</a>
   </li>
 </ul>

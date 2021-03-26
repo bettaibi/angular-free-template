@@ -9,6 +9,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private http: HttpClient
+  ) {}
+
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -33,8 +40,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void{
     this.http.get('https://jsonplaceholder.typicode.com/todos').subscribe((data)=>{
       console.log(data)
-    })
+    });
   }
 
-  constructor(private breakpointObserver: BreakpointObserver, private http: HttpClient) {}
 }

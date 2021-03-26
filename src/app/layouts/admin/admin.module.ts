@@ -12,8 +12,9 @@ import { NavigationModule } from 'src/app/shared/navigation/navigation.module';
 
 const routes: Routes = [
   { path: '', component: AdminComponent , children: [
-    {path: '', pathMatch: 'full', redirectTo: '/statistics'},
-    { path: 'statistics', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
+    { path: '', pathMatch: 'full', redirectTo: '/statistics' },
+    { path: 'statistics', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    { path: 'custom-components', loadChildren: () => import('./custom-components/custom-components.module').then(m => m.CustomComponentsModule)}
   ]}
 ];
 
