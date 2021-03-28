@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -38,9 +39,13 @@ export class HomeComponent implements OnInit {
   );
 
   ngOnInit(): void{
-    this.http.get('https://jsonplaceholder.typicode.com/todos').subscribe((data)=>{
+    this.getTodos().subscribe((data)=>{
       console.log(data)
     });
+  }
+
+  getTodos(): Observable<any>{
+    return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
 
 }

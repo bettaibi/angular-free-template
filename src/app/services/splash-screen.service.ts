@@ -29,7 +29,6 @@ export class SplashScreenService {
                 take(1)
             ).subscribe(() => {
                 setTimeout(()=>{
-                    console.log('the navigation has been ended')
                     this.hide();
                 },0)
             })
