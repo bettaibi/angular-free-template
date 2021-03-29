@@ -22,7 +22,6 @@ export class NavigationComponent implements OnInit {
 
   toggle():void{
     if(this.nav.path){
-      console.log(this.nav.path)
       this.router.navigateByUrl(this.nav.path);
       this.isOpen = true;
     }
