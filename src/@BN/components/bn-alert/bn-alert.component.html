@@ -1,0 +1,7 @@
+
+<div class="bn-alert-container top-right">
+    <div [class]="'bn-alert '+ alertProps.mode" (click)="onAlertClicked($event)"
+     @slideInOut [style]="alertProps.css">
+        <ng-template alertContent></ng-template>
+    </div>
+</div>

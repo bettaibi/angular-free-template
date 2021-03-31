@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BnAlertService } from 'src/app/@BN/components/bn-alert/bn-alert.service';
+import { BnAlertService } from '@BN/components/bn-alert/bn-alert.service';
 import { AlertContentComponent } from './alert-content/alert-content.component';
 
 @Component({
@@ -17,9 +17,11 @@ export class AlertComponent implements OnInit {
 
 
   open(): void{
-    const alretRef = this.alertService.open(AlertContentComponent, {data: {
-      name: "bettaibi nidhal"
-    }});
+    const alretRef = this.alertService.open(AlertContentComponent, {
+      data: {firstname: 'Bettaibi', lastname: 'Nidhal'},
+      mode: 'default',
+     
+    });
 
     alretRef.afterClose.subscribe((result)=>{
       console.log(result)

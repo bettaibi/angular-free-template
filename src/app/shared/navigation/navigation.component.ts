@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Navigation } from 'src/app/models/navigation';
+import { Navigation } from 'app/models/navigation';
 import { Router } from '@angular/router';
 
 @Component({

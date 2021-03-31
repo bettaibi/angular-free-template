@@ -30,7 +30,6 @@ export class BnAlertService {
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(BnAlertComponent);
         const componentRef = componentFactory.create(new AlertInjector(this.injector, weakMap));
         this.appRef.attachView(componentRef.hostView);
-        console.log(this.appRef)
       
         const domElem = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
         document.body.appendChild(domElem);
@@ -48,6 +47,9 @@ export class BnAlertService {
     public open(componentType: Type<any>, config?: AlertConfig) {
         const ref = this.appendAlertComponentToBody(config);
         this.AlertComponentRef.instance.childComponentType = componentType;
+        if(config){
+            this.AlertComponentRef.instance.alertProps = {css: config.css, mode: config.mode};
+        }
         return ref;
     }
 

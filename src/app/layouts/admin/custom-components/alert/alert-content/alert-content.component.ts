@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertRef } from 'src/app/@BN/components/bn-alert/alert-ref';
-import { AlertConfig } from 'src/app/@BN/components/bn-alert/bn-alert-config';
+import { AlertRef } from '@BN/components/bn-alert/alert-ref';
+import { AlertConfig } from '@BN/components/bn-alert/bn-alert-config';
 
 @Component({
   selector: 'app-alert-content',

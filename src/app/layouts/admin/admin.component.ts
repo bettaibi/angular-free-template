@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { navigations } from 'src/app/models/navigation';
+import { navigations } from 'app/models/navigation';
 
 @Component({
   selector: 'app-admin',

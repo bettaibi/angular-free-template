@@ -16,7 +16,7 @@ export class AlertInjector implements Injector {
   get(token: any, notFoundValue?: any, flags?: any) {
     const value = this._additionalTokens.get(token)
     
-    if (value) return value
+    if (value) return value;
 
     return this._parentInjector.get<any>(token, notFoundValue)
   }

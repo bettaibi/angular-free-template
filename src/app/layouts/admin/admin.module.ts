@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { NavigationModule } from 'src/app/shared/navigation/navigation.module';
+import { NavigationModule } from 'app/shared/navigation/navigation.module';
 
 const routes: Routes = [
   { path: '', component: AdminComponent , children: [
