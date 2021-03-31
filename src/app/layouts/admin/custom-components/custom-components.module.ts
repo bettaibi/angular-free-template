@@ -7,7 +7,8 @@ import { CustomComponentsComponent } from './custom-components.component'
 const routes: Routes = [
   {path: '', component: CustomComponentsComponent, children: [
     {path: '', pathMatch: 'full', redirectTo: 'toast'},
-    {path: 'toast', loadChildren: ()=> import('./toast/toast.module').then(m=> m.ToastModule)}
+    {path: 'toast', loadChildren: () => import('./toast/toast.module').then(m=> m.ToastModule)},
+    {path: 'alert', loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)}
   ]}
 ];
 
@@ -21,4 +22,4 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class CustomComponentsModule { }
+export class CustomComponentsModule {}

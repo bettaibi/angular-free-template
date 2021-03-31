@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit {
   );
 
   ngOnInit(): void{
-    this.getTodos().subscribe((data)=>{
-      console.log(data)
-    });
+    // this.getTodos().subscribe((data)=>{
+    //   console.log(data)
+    // });
   }
 
   getTodos(): Observable<any>{

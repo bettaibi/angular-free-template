@@ -21,8 +21,8 @@ export const navigations: Navigation[] = [
         title: 'Custom Components',
         icon: 'library_books',
         subItems: [
-            {title: 'Toast', path:'/custom-components/toast'},
-            {title: 'Register', path:'/register'},
+            {title: 'Toast Component', path:'/custom-components/toast'},
+            {title: 'Alert Component', path:'/custom-components/alert'},
             {title: 'Forget Password', path:'/forget-password'},
         ]
     },

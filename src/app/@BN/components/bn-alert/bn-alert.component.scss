@@ -1,0 +1,53 @@
+:host{
+    .bn-alert-container{
+        position: fixed;
+        // bottom: 0;
+        // right: 0;
+        // left: 0;
+        // top: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 99999999;
+        &.top-right{
+            top: 0;
+            right: 0;
+            // align-items: flex-end;
+            // justify-content: flex-start;
+        }
+
+        .bn-alert{
+            border-width: 1px;
+            border-style: solid;
+            border-radius: .25rem;
+            margin: 1rem;
+            min-width: 240px;
+            width: 300px;
+            z-index: 99999999999;
+            &.info{
+                color: #004085;
+                background-color: #cce5ff;
+                border-color: #b8daff;
+            }
+            &.success{
+                color: #155724;
+                background-color: #d4edda;
+                border-color: #c3e6cb;
+            }
+            &.danger{
+                color: #721c24;
+                background-color: #f8d7da;
+                border-color: #f5c6cb;
+            }
+            &.warn{
+                color: #856404;
+                background-color: #fff3cd;
+                border-color: #ffeeba;
+            }
+            &.default{
+                color: #383d41;
+                background-color: #e2e3e5;
+                border-color: #d6d8db;
+            }
+        }
+    }
+}
