@@ -4,6 +4,10 @@ import { AuthComponent } from './auth.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SharedMaterialModule } from 'app/shared/shared_material_components/shared-mat-components.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -20,7 +24,12 @@ const routes: Routes = [
   declarations: [AuthComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedMaterialModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
