@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="d-grid grid-xs-column grid-sm-column">
+    <div class="bg-full d-sm-none d-xs-none"></div>
+    <div class="form">
+        <div>
+            <div class="logo">
+                <img src="../../../../assets/img/logo.png" alt="logo">
+            </div>
+            <p class="text-uppercase mt1">CREATE AN ACCOUNT</p>
+        </div>
+
+        <form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+            <mat-form-field  class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label>Email</mat-label>
+                <input type="email" autocomplete="off" matInput placeholder="Enter your email" formControlName="email">
+                <mat-hint>We'll never share your email with anyone else.</mat-hint>
+                <mat-error *ngIf="formGroup.get('email').invalid">{{getEmailErrors()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" autocomplete="off" placeholder="Enter your password"
+                formControlName="password">
+                <mat-error *ngIf="formGroup.get('password').invalid">{{getPasswordErrors()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" autocomplete="off" placeholder="Confirm your password"
+                formControlName="confirmPassword">
+                <!-- <mat-error *ngIf="formGroup.get('password').invalid">{{getPasswordErrors()}}</mat-error> -->
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary"
+            style="width: 100%;" [disabled]="formGroup.invalid">Register</button>
+
+            <div class="mt3 d-flex flex-column align-items-center">
+                <span>Already have an account?</span>
+                <button type="button" mat-stroked-button color="primary" style="margin-top: .5rem;"
+                [routerLink]="['/auth/login']">Login!</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SharedService } from 'app/services/shared.service';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +9,12 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  hide = true;
   formGroup: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private sharedService: SharedService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +43,9 @@ export class LoginComponent implements OnInit {
   }
 
   handleSubmit() :void{
-    console.log(this.formGroup.value)
+    console.log(this.formGroup.value);
+    this.sharedService.showMsg('Welcome back');
+    this.router.navigateByUrl('/');
   }
 
 }

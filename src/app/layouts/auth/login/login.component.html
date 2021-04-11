@@ -1,4 +1,4 @@
-<div class="d-flex flex-row">
+<div class="d-grid grid-xs-column grid-sm-column">
     <div class="bg-full d-sm-none d-xs-none"></div>
     <div class="form">
         <div>
@@ -9,27 +9,29 @@
         </div>
 
         <form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
-            <mat-form-field appearance="fill" class="w-100 mb3 mt2" floatLabel="always">
-                <mat-label>Enter your email</mat-label>
-                <input type="email" matInput placeholder="email" formControlName="email">
+            <mat-form-field  class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label>Email</mat-label>
+                <input type="email" autocomplete="off" matInput placeholder="Enter your email" formControlName="email">
                 <mat-hint>We'll never share your email with anyone else.</mat-hint>
                 <mat-error *ngIf="formGroup.get('email').invalid">{{getEmailErrors()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="fill" class="w-100 mb3 mt2" floatLabel="always">
-                <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" placeholder="password"
+            <mat-form-field class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label>Password</mat-label>
+                <input matInput autocomplete="off" type="password" placeholder="Enter your password"
                 formControlName="password">
                 <mat-hint>
-                    <a href="" class="link fw-400">Recover Password</a>
+                    <small [routerLink]="['/auth/forgot-password']" class="link fw-400 text-accent">Recover Password</small>
                 </mat-hint>
                 <mat-error *ngIf="formGroup.get('password').invalid">{{getPasswordErrors()}}</mat-error>
             </mat-form-field>
 
-            <div>
-                <button type="submit" mat-raised-button color="primary"
-                 style="margin-right: .5rem;" [disabled]="formGroup.invalid">Login</button>
-                <button type="button" mat-stroked-button color="primary"
+            <button type="submit" mat-raised-button color="primary"
+            style="width: 100%;" [disabled]="formGroup.invalid">Login</button>
+
+            <div class="mt3 d-flex flex-column align-items-center">
+                <span>Don't have an account?</span>
+                <button type="button" mat-stroked-button color="primary" style="margin-top: .5rem;"
                 [routerLink]="['/auth/register']">Create an Account!</button>
             </div>
             

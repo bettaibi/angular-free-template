@@ -13,6 +13,9 @@
     .container{
         width: 100%;
     }
+    .grid-xs-column{
+        grid-template-columns: 1fr !important;
+    }
 }
 @include mediaSm{
     .d-sm-none{
@@ -20,6 +23,9 @@
     }
     .container{
         max-width: 540px;
+    }
+    .grid-sm-column{
+        grid-template-columns: 1fr !important;
     }
 }
 @include mediaMd{

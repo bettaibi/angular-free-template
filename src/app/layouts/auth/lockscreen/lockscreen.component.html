@@ -1,0 +1,19 @@
+<div id="lockscreen" class="bg-accent d-flex flex-column align-items-center h-100 w-100">
+
+    <div class="d-flex flex-column align-items-center" style="min-width: 300px;">
+        <div class="user-avatar shadow-sm">
+            <img src="../../../../assets/img/avatars/Arnold.jpg" alt="avatar">
+        </div>
+        <h2>Arnold Doe</h2>
+        <small>Enter a correct password to unlock this page</small>
+        <div class="mt3 w-100">
+            <mat-form-field class="w-100 mb3 mt2" floatLabel="always">
+                <mat-label style="color: #000;">Password</mat-label>
+                <input matInput type="password" placeholder="Enter your password" autocomplete="off"
+                [formControl]="password">
+                <mat-error style="color: #000;" *ngIf="password.invalid">{{getPasswordErrors()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button [disabled] = "password.invalid" style="width: 100%;">Login</button>
+    </div>
+</div>

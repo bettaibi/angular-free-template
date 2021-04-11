@@ -71,8 +71,8 @@ export const navigations: Navigation[] = [
         subItems: [
             {title: 'Login', path:'/auth/login'},
             {title: 'Register', path:'/auth/register'},
-            {title: 'Forgot', path:'/auth/forget-password'},
-            {title: 'Lockscreen', path:'/auth/lock-screen'},
+            {title: 'Forgot', path:'/auth/forgot-password'},
+            {title: 'Lockscreen', path:'/auth/lockscreen'},
         ]
     },
     {

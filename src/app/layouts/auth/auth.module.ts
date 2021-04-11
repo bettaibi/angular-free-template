@@ -8,6 +8,8 @@ import { SharedMaterialModule } from 'app/shared/shared_material_components/shar
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LockscreenComponent } from './lockscreen/lockscreen.component';
 
 const routes: Routes = [
   {
@@ -15,13 +17,21 @@ const routes: Routes = [
     [
       {path: '', pathMatch: 'full', redirectTo: 'login'},
       {path: 'login', component: LoginComponent},
-      {path: 'register', component: RegisterComponent}
+      {path: 'register', component: RegisterComponent},
+      {path: 'lockscreen', component: LockscreenComponent},
+      {path: 'forgot-password', component: ForgotPasswordComponent}
     ]
   }
 ]
 
 @NgModule({
-  declarations: [AuthComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AuthComponent, 
+    LoginComponent, 
+    RegisterComponent, 
+    ForgotPasswordComponent, 
+    LockscreenComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
