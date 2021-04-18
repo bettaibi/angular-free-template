@@ -8,7 +8,9 @@ const routes: Routes = [
   {path: '', component: CustomComponentsComponent, children: [
     {path: '', pathMatch: 'full', redirectTo: 'toast'},
     {path: 'toast', loadChildren: () => import('./toast/toast.module').then(m=> m.ToastModule)},
-    {path: 'alert', loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)}
+    {path: 'alert', loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)},
+    {path: 'dynamic-form-validation', loadChildren: () => import('./dynamic-form-validation/dynamic-form-validation.module').then(m=> m.DynamicFormValidationModule)},
+    
   ]}
 ];
 

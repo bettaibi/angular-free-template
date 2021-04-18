@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-.justify-space-between{
+.justify-content-between{
     align-items: center;
     justify-content: space-between;
 }
@@ -251,6 +251,12 @@
 }
 .text-uppercase{
     text-transform: uppercase;
+}
+.border {
+    border: 1px solid #dee2e6!important;
+}
+.rounded {
+    border-radius: .25rem!important;
 }
 
 .link{

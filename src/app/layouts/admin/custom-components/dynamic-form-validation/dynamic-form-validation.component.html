@@ -1,0 +1,71 @@
+<div class="p3 m3 border rounded bg-light">
+  <p class="m0">
+    Let's assume that we have this Json Form data which represents a product's details.
+    We would create a dynamic form validation to the following schema.
+  </p>
+  <pre>{{product | json}}</pre>
+</div>
+
+<form [formGroup]="dynamicForm">
+
+  <div class="p3 m3 rounded bg-light">
+    <mat-form-field class="w-100" floatLabel="always">
+      <mat-label>Label</mat-label>
+      <input type="text" autocomplete="off" matInput placeholder="Enter product's name" formControlName="label">
+      <mat-hint>this is just an example.</mat-hint>
+      <mat-error *ngIf="dynamicForm.get('label').invalid">
+        Label is required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="mx3 d-flex flex-row justify-content-between">
+    <h3>Charecteristics</h3>
+    <div>
+      <button type="button" mat-raised-button color="accent" style="margin-right: 0.5rem;"
+       (click)="newRow()">New Row</button>
+      <button mat-raised-button color="primary" (click)="save()" [disabled]="dynamicForm.invalid">Save All</button>
+    </div>
+  </div>
+
+  <div *ngFor="let caracteristicGroup of dynamicForm.get('charecteristics')['controls']; let idx = index;">
+
+    <form [formGroup]="caracteristicGroup" class="p3 m3 border rounded bg-light">
+      <div class="text-right">
+        <button mat-mini-fab type="button" color="warn" (click)="remove(idx)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+      <mat-form-field class="w-100 mb3" floatLabel="always">
+        <mat-label>Serial</mat-label>
+        <input type="text" autocomplete="off" matInput placeholder="Enter product's Serail Number" 
+        formControlName="serial">
+        <mat-error *ngIf="caracteristicGroup.get('serial').invalid">
+          Serial Number is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 mb3" floatLabel="always">
+        <mat-label>Color</mat-label>
+        <input type="text" autocomplete="off" matInput placeholder="Enter product's Color" 
+        formControlName="color">
+        <mat-error *ngIf="caracteristicGroup.get('color').invalid">
+         Color is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100" floatLabel="always">
+        <mat-label>Category</mat-label>
+        <input type="text" autocomplete="off" matInput placeholder="Choose a category" 
+        formControlName="category">
+        <mat-error *ngIf="caracteristicGroup.get('category').invalid">
+          Category is required
+        </mat-error>
+      </mat-form-field>
+
+    </form>
+
+  </div>
+
+</form>

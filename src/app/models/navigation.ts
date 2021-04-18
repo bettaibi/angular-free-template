@@ -90,7 +90,7 @@ export const navigations: Navigation[] = [
         subItems: [
             {title: 'Toast Component', path:'/custom-components/toast'},
             {title: 'Alert Component', path:'/custom-components/alert'},
-            {title: 'Forget Password', path:'/forget-password'},
+            {title: 'Dynamic Form Validation', path:'/custom-components/dynamic-form-validation'},
         ]
     }
 ]
