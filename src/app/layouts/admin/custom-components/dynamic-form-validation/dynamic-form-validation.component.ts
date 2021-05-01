@@ -10,7 +10,7 @@ export class DynamicFormValidationComponent implements OnInit {
   dynamicForm: FormGroup;
   product = {
     label: 'Galaxy S10',
-    charecteristics: [
+    characteristics: [
       {
         serial: '7895478854854',
         color: 'black',

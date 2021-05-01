@@ -10,7 +10,7 @@ const routes: Routes = [
     {path: 'toast', loadChildren: () => import('./toast/toast.module').then(m=> m.ToastModule)},
     {path: 'alert', loadChildren: () => import('./alert/alert.module').then(m => m.AlertModule)},
     {path: 'dynamic-form-validation', loadChildren: () => import('./dynamic-form-validation/dynamic-form-validation.module').then(m=> m.DynamicFormValidationModule)},
-    
+    {path: 'dragdrop-file-upload', loadChildren: () => import('./dragdrop-file-upload/dragdrop-file-upload.module').then(m=> m.DragdropFileUploadModule)}
   ]}
 ];
 

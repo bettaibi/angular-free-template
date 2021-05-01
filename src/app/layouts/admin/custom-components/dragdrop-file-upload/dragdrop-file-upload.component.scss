@@ -1,0 +1,15 @@
+
+:host{
+
+    .drag-zone{
+        border-style: dashed;
+        border-color: #dee2e6;
+        border-width: 1px;
+        min-height: 300px;
+
+        &.active{
+            border-color: #1976d2;
+            background-color: #fff;
+        }
+    }
+}

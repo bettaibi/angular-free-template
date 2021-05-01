@@ -8,7 +8,7 @@
 
 <form [formGroup]="dynamicForm">
 
-  <div class="p3 m3 rounded bg-light">
+  <div class="p3 m3 rounded bg-light border">
     <mat-form-field class="w-100" floatLabel="always">
       <mat-label>Label</mat-label>
       <input type="text" autocomplete="off" matInput placeholder="Enter product's name" formControlName="label">
@@ -20,7 +20,7 @@
   </div>
 
   <div class="mx3 d-flex flex-row justify-content-between">
-    <h3>Charecteristics</h3>
+    <h3>Characteristics</h3>
     <div>
       <button type="button" mat-raised-button color="accent" style="margin-right: 0.5rem;"
        (click)="newRow()">New Row</button>

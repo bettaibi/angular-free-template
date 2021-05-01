@@ -1,0 +1,31 @@
+
+<div class="border m3 px3 bg-light rounded">
+  <p>
+    The Component below provides a drag and drop file upload feature. <br> 
+    Upload one or many files by draging your file into the box.
+  </p>
+</div>
+
+<div class="d-flex flex-column align-items-center rounded m3 p3 drag-zone"
+    fileDrop (filesDropped)="filesDroppedHandler($event)" 
+    (filesHovered)= "filesHoveredHandler($event)"
+    [ngClass]="{'active': isHovered}">
+
+    <p class="text-secondary text-center">
+       {{isHovered ? 'Files are ready to upload' : 'Drop your files here or click on the button below'}}
+    </p>
+
+    <small class="text-secondary">Files : {{isHovered ? files.length + ' Files are selected' : 'No files are selected'}}</small>
+
+     <div class="mt3">
+        <button mat-raised-button color='primary'
+            (click)="file.click()" *ngIf="!isHovered">
+            Choose Files
+        </button>
+        <button mat-raised-button color='accent'
+            (click)="uploadHandler()" *ngIf="isHovered">
+            Upload
+        </button>
+        <input  *ngIf="isHovered" type="file" #file hidden (change)="onChange($event)" multiple accept="image/*" />
+     </div>
+</div>

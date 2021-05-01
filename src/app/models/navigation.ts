@@ -91,6 +91,7 @@ export const navigations: Navigation[] = [
             {title: 'Toast Component', path:'/custom-components/toast'},
             {title: 'Alert Component', path:'/custom-components/alert'},
             {title: 'Dynamic Form Validation', path:'/custom-components/dynamic-form-validation'},
+            {title: 'DragDrop File Upload', path:'/custom-components/dragdrop-file-upload'},
         ]
     }
 ]
