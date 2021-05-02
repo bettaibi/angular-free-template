@@ -8,6 +8,10 @@
         min-height: 300px;
 
         &.active{
+            border-color: orangered;
+            background-color: #fff;
+        }
+        &.droped{
             border-color: #1976d2;
             background-color: #fff;
         }

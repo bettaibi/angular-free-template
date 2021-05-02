@@ -9,23 +9,23 @@
 <div class="d-flex flex-column align-items-center rounded m3 p3 drag-zone"
     fileDrop (filesDropped)="filesDroppedHandler($event)" 
     (filesHovered)= "filesHoveredHandler($event)"
-    [ngClass]="{'active': isHovered}">
+    [ngClass]="{'active': isHovered, 'droped': files.length>0}">
 
     <p class="text-secondary text-center">
-       {{isHovered ? 'Files are ready to upload' : 'Drop your files here or click on the button below'}}
+       {{files.length>0 ? 'Files are ready to upload' : 'Drop your files here or click on the button below'}}
     </p>
 
-    <small class="text-secondary">Files : {{isHovered ? files.length + ' Files are selected' : 'No files are selected'}}</small>
+    <small class="text-secondary">Files : {{files.length>0 ? files.length + ' File(s) are selected' : 'No files are selected'}}</small>
 
      <div class="mt3">
         <button mat-raised-button color='primary'
-            (click)="file.click()" *ngIf="!isHovered">
+            (click)="file.click()" *ngIf="files.length === 0">
             Choose Files
         </button>
         <button mat-raised-button color='accent'
-            (click)="uploadHandler()" *ngIf="isHovered">
+            (click)="uploadHandler()" *ngIf="files.length>0">
             Upload
         </button>
-        <input  *ngIf="isHovered" type="file" #file hidden (change)="onChange($event)" multiple accept="image/*" />
+        <input type="file" #file hidden (change)="onChange($event)" multiple accept="image/*" />
      </div>
 </div>

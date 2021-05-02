@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DragdropFileUploadComponent } from './dragdrop-file-upload.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { FileDropModule } from '@BN/directives/file-drop.module';
+import { FileDropModule } from '@BN/directives/file-drop/file-drop.module';
 
 const routes: Routes = [
   {path: '', component: DragdropFileUploadComponent}

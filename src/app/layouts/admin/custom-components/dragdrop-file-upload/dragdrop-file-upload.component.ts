@@ -18,12 +18,10 @@ export class DragdropFileUploadComponent implements OnInit {
 
   onChange(e: any): void{
     this.files = e.target.files;
-    this.isHovered = true;
   }
 
   filesDroppedHandler(fileList: any[]): void{
     this.files = fileList;
-    this.isHovered = true;
   }
 
   filesHoveredHandler(isHovered: boolean): void{

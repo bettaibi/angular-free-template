@@ -56,6 +56,6 @@ export class SplashScreenService {
 
         setTimeout(()=>{
             this.player.play();
-        },0)
+        },0);
     }
 }
