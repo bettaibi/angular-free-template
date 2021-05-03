@@ -79,7 +79,7 @@ export const navigations: Navigation[] = [
         title: 'Landing Pages',
         icon: 'pages',
         subItems: [
-            {title: 'Login', path:'/login'},
+            {title: 'Cloud Hosting', path:'/landing-pages/cloud-hosting'},
             {title: 'Register', path:'/register'},
             {title: 'Forget Password', path:'/forget-password'},
         ]

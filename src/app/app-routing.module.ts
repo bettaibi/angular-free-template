@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'auth', 
     loadChildren: () => import('./layouts/auth/auth.module').then(m => m.AuthModule),
   },
+  { 
+    path: 'landing-pages', 
+    loadChildren: () => import('./layouts/admin/landing-pages/landing-pages.module').then(m => m.LandingPagesModule)
+  },
   {
     path: '**',
     pathMatch: 'full',

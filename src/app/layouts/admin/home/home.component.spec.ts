@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { HomeComponent } from './home.component';
 
+// test suite
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
@@ -34,6 +35,7 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
+  // test spec
   it('should compile', () => {
     expect(component).toBeTruthy();
   });

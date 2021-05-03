@@ -13,8 +13,7 @@ export class ToastComponent implements OnInit {
    
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
 
 }
